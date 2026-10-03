@@ -1,17 +1,25 @@
-def calculadora():
-    numero1 = float(input("digite o primeiro numero: "))
-    operador = input("Digite a operacao: ")
-    numero2 = float(input("digite o segundo numero: "))
+def somar(numero1, numero2):
+    return numero1 + numero2
+def subtrair(numero1, numero2):
+    return numero1 - numero2
+def multiplicar(numero1, numero2):
+    return numero1 * numero2
+def dividir(numero1, numero2):
+    return numero1 / numero2
 
-    if operador ==  "+":
-        return "Resultado", numero1 + numero2
-    elif operador == "-":
-        return"Resultado", numero1 - numero2
-    elif operador == "*":
-        return"resultado:", numero1 * numero2
-    elif operador == "/":
-        return"resultado", numero1 // numero2
-    else:
-        print("operação invalida!")
-resultado = calculadora()
-print("Resultado: ", resultado)
+numero1 = float(input("Digite o primeiro numero: "))
+operacao = input("Digite a operação: ")
+numero2 = float(input("Digite o segundo numero: "))
+
+if operacao == "+":
+    resultado = somar(numero1, numero2)
+elif operacao == "-":
+    resultado = subtrair(numero1, numero2)
+elif operacao == "*":
+    resultado = multiplicar(numero1, numero2)
+elif operacao == "/":
+    resultado = dividir(numero1, numero2)
+else:
+    print("operaçãp invalida!!")
+
+print("resultado: ", resultado)
